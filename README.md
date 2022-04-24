@@ -23,4 +23,4 @@ All basic features are implemented
 - Creative: Some added features are:
    - Dynamically generated social icons that lead to the respective social handles of artists (Search Rihanna for all icons, as she has all the handles available in the API)
    - A link on events that takes the user to Google Maps location of the event
--Deployment: AWS S3 and CloudFront have been utilized to provide hosting at: https://dev.d3e2h879xzb4tz.amplifyapp.com/
+- Deployment: AWS S3 and CloudFront have been utilized to provide hosting at: https://dev.d3e2h879xzb4tz.amplifyapp.com/
