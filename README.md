@@ -10,6 +10,7 @@ Once the artist is clicked, all the upcoming events of the artist are displayed 
 - Country
 - City
 - Venue
+- Date
 - A google maps link that takes the user directly to google maps with the event venue pre-pinned
 
 ## Technical Description
