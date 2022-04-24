@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body {
+  background-image: url("../public/bg.jpg");
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
