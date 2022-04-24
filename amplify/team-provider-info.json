@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-artbase-dev-40351-authRole",
+            "UnauthRoleArn": "arn:aws:iam::420899468217:role/amplify-artbase-dev-40351-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::420899468217:role/amplify-artbase-dev-40351-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-artbase-dev-40351-deployment",
+            "UnauthRoleName": "amplify-artbase-dev-40351-unauthRole",
+            "StackName": "amplify-artbase-dev-40351",
+            "StackId": "arn:aws:cloudformation:us-east-1:420899468217:stack/amplify-artbase-dev-40351/d19ea510-c422-11ec-930d-0a31637c3379",
+            "AmplifyAppId": "d3e2h879xzb4tz"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d3e2h879xzb4tz",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}

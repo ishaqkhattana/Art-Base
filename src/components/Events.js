@@ -50,7 +50,7 @@ export const Events = () => {
               <div className="grid grid-cols-1 my-2">
                 <span className="text-black text-xl">Date </span>
                 <p className="text-base lg:text-lg text-gray-300">
-                  {moment(event?.starts_at).format("MMMM Do YYYY") }
+                  {moment(event?.starts_at).format("MMMM Do YYYY")}
                 </p>
               </div>
             </div>
