@@ -25,7 +25,7 @@ All basic features are implemented
    - A link on events that takes the user to Google Maps location of the event
 - Deployment: AWS S3 and CloudFront have been utilized to provide hosting at: https://dev.d3e2h879xzb4tz.amplifyapp.com/
 
-# Running the Project Locally
+## Running the Project Locally
 - Ensure you have npm and node installed (Node v 16.0.0 used for development)
 - Open a terminal and move to the project directory
 - Type "npm install"
