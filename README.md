@@ -21,5 +21,5 @@ All basic features are implemented
 ## Bonus Features (3/3)
 - Persistence: Cookies are used to persist the last searched artist across browser reloads
 - Creative: Some added features are:
--- Dynamically generated social icons that lead to the respective social handles of artists (Search Rihanna for all icons, as she has all the handles available in the API)
--- A link on events that takes the user to Google Maps location of the event
+   - Dynamically generated social icons that lead to the respective social handles of artists (Search Rihanna for all icons, as she has all the handles available in the API)
+   - A link on events that takes the user to Google Maps location of the event
