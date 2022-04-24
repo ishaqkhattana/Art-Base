@@ -13,7 +13,7 @@ Once the artist is clicked, all the upcoming events of the artist are displayed 
 - A google maps link that takes the user directly to google maps with the event venue pre-pinned
 
 ## Technical Description
-React was chosen as the framework of choice for the project. Tailwindcss was used as the css framework for styling. The entire application is responsive for mobile, tablet and desktop devices. React-Router-Dom is being used to handle routing on the single page web application.
+React was chosen as the framework of choice for the project. Tailwindcss was used as the css framework for styling. The entire application is responsive for mobile, tablet and desktop devices. Axios has been used to make calls to the bandsintown API featuring a clean services architecture and exception handling. React-Router-Dom is being used to handle routing on the single page web application.
 
 ## Basic Features
 All basic features are implemented
