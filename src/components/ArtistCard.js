@@ -6,12 +6,12 @@ import { useNavigate } from "react-router-dom";
 import { Loader } from "./reusables/Loader";
 
 export const ArtistCard = ({ artist, loading }) => {
-  console.log(artist);
   const navigate = useNavigate();
 
   const handleFetchEvents = (artist) => {
     navigate(`/events?artist=${artist?.name}`);
   };
+  //Checking here if social links returned by the API are usernames or entire links
   const isValidURL = (string) => {
     var res = string.match(
       /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g
@@ -19,11 +19,10 @@ export const ArtistCard = ({ artist, loading }) => {
     return res !== null;
   };
   return artist !== "" ? (
-    <div className="grid grid-cols-1 px-8 gap-8 mt-8 z-0 justify-items-center ">
-      <div className="lg:w-1/4 w-full border border-gray-50 border-opacity-80 rounded-lg p-4 shadow-2xl transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none cursor-pointer">
+    <div className="grid grid-cols-1 px-8 gap-8 mt-8 z-0 justify-items-center text-white">
+      <div className="lg:w-1/4 w-full border-opacity-80 rounded-lg p-4 shadow-2xl transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none cursor-pointer">
         <a
           onClick={(e) => {
-            console.log("clicked");
             e.stopPropagation();
             handleFetchEvents(artist);
           }}
@@ -33,10 +32,10 @@ export const ArtistCard = ({ artist, loading }) => {
             src={artist?.image_url}
             alt="artist"
           />
-          <p className="font-medium text-lg lg:text-2xl mt-4">{artist?.name}</p>
+          <p className="font-medium text-lg lg:text-2xl mt-4 text-gray-300">{artist?.name}</p>
           <div className="grid grid-cols-3 justify-items-center mt-4">
             {/* If there are no links, the API returns an empty string instead of
-            an array, an inconsistency which has been handled below */}
+            an empty array, an inconsistency which has been handled below */}
             {Array.isArray(artist?.links)
               ? artist?.links.map((link, index) => {
                   //There is another inconsistency in the API. Sometimes it returns the social username and sometimes the entire URL

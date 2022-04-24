@@ -7,15 +7,17 @@ export const SearchBar = () => {
   //Local States
   const [artist, setArtist] = useState("");
   const [loading, setLoading] = useState("");
-  //Cookie
+  //Cookies
   const [cookies, setCookie, removeCookie] = useCookies(["artist"]);
 
+  //Take Artist from cookies if it doesn't exist in the local state yet
   useEffect(() => {
-    console.log(cookies.artist)
     if (artist === "" && cookies.artist) {
       setArtist(cookies.artist);
     }
   }, [artist]);
+  
+  //Once user presses enter on the search, we fetch the artist, clear local storage then store it in cookies and local state
   const handleKeyPress = async (e) => {
     if (e?.key === "Enter") {
       setLoading(true);
@@ -28,20 +30,20 @@ export const SearchBar = () => {
     }
   };
   return (
-    <div class="grid grid-cols-1">
-      <div class="flex justify-center mt-4 ml-14">
-        <div class="mb-3 xl:w-3/4">
-          <div class="input-group relative flex items-stretch w-full mb-4 rounded">
+    <div className="grid grid-cols-1">
+      <div className="flex justify-center mt-4 ml-14">
+        <div className="mb-3 xl:w-3/4">
+          <div className="input-group relative flex items-stretch w-full mb-4 rounded">
             <input
               type="search"
-              class="text-center form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              className="text-center form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
               placeholder="Search Artist Name"
               aria-label="Search"
               aria-describedby="button-addon2"
               onKeyPress={(e) => handleKeyPress(e)}
             />
             <span
-              class="input-group-text flex items-center px-3 py-1.5 text-base font-normal text-gray-700 text-center whitespace-nowrap rounded"
+              className="input-group-text flex items-center px-3 py-1.5 text-base font-normal text-gray-700 text-center whitespace-nowrap rounded"
               id="basic-addon2"
             >
               <svg
@@ -49,7 +51,7 @@ export const SearchBar = () => {
                 focusable="false"
                 data-prefix="fas"
                 data-icon="search"
-                class="w-4"
+                className="w-4"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
