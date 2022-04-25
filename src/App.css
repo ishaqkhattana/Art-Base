@@ -3,6 +3,7 @@
 }
 
 body {
+  height: 100vh;
   background-image: url("../public/bg.jpg");
   background-size:cover
 }
